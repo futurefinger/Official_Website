@@ -1,0 +1,6 @@
+# Future Finger Technologies - Official Robots Configuration
+User-agent: *
+Allow: /
+
+# XML Sitemap Location
+Sitemap: https://futurefinger.github.io/Official_Website/sitemap.xml
