@@ -350,6 +350,16 @@ export const Navbar: React.FC = () => {
 
             {/* Header Right Actions */}
             <div className="hidden lg:flex items-center gap-3">
+              {/* HRMS SaaS Live Portal CTA */}
+              <Link
+                to="/hrms"
+                className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-emerald-950/70 border border-emerald-500/40 text-emerald-300 text-xs font-semibold hover:bg-emerald-900/70 hover:text-emerald-200 transition-all shadow-sm group"
+                title="WorkSphere HRMS SaaS & Contract Lifecycle Management"
+              >
+                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                <span>HRMS Portal</span>
+              </Link>
+
               {/* Search Modal Trigger */}
               <button
                 onClick={() => setSearchModalOpen(true)}
@@ -467,6 +477,13 @@ export const Navbar: React.FC = () => {
 
             {/* CTAs */}
             <div className="pt-4 space-y-2.5">
+              <Link
+                to="/hrms"
+                className="w-full flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl text-center text-xs font-bold text-emerald-300 bg-emerald-950/80 border border-emerald-500/40 shadow-sm"
+              >
+                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                <span>Launch Live HRMS SaaS Portal</span>
+              </Link>
               <Link
                 to="/request-quote"
                 className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl text-center text-sm font-semibold text-white bg-gradient-to-r from-brand-600 via-cyan-600 to-indigo-600 shadow-lg shadow-brand-500/20"

@@ -44,6 +44,12 @@ import { DisclaimerPage } from './pages/legal/DisclaimerPage';
 import { RefundPolicyPage } from './pages/legal/RefundPolicyPage';
 import { IntellectualPropertyPage } from './pages/legal/IntellectualPropertyPage';
 
+// HRMS SaaS Portal & Contract Lifecycle
+import { HRMSDashboardPage } from './pages/hrms/HRMSDashboardPage';
+import { HRMSContractsPage } from './pages/hrms/HRMSContractsPage';
+import { HRMSEmployeesPage } from './pages/hrms/HRMSEmployeesPage';
+import { HRMSLoginPage } from './pages/hrms/HRMSLoginPage';
+
 // 404
 import { NotFoundPage } from './pages/common/NotFoundPage';
 
@@ -98,6 +104,12 @@ export const App: React.FC = () => {
           <Route path="/disclaimer" element={<DisclaimerPage />} />
           <Route path="/refund-policy" element={<RefundPolicyPage />} />
           <Route path="/intellectual-property" element={<IntellectualPropertyPage />} />
+
+          {/* HRMS SaaS Portal & Contract Lifecycle Management */}
+          <Route path="/hrms" element={<HRMSDashboardPage />} />
+          <Route path="/hrms/contracts" element={<HRMSContractsPage />} />
+          <Route path="/hrms/employees" element={<HRMSEmployeesPage />} />
+          <Route path="/hrms/login" element={<HRMSLoginPage />} />
 
           {/* 404 Fallback */}
           <Route path="*" element={<NotFoundPage />} />

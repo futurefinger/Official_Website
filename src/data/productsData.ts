@@ -76,8 +76,8 @@ export const productsData: ProductItem[] = [
       'Empowers employees with instant transparent access to their payroll history',
       'Maintains 100% compliance with regional statutory labor regulations'
     ],
-    ctaText: 'Request HRLord™ Pilot Access',
-    ctaLink: '/contact?product=HRLord'
+    ctaText: 'Launch Live HRMS SaaS Portal',
+    ctaLink: '/hrms'
   },
   {
     id: 'fft-trace-x',
