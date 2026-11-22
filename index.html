@@ -37,25 +37,35 @@
 
     <!-- GitHub Pages Single Page Apps Path Restoration Script -->
     <script type="text/javascript">
-      // Single Page Apps for GitHub Pages
-      // MIT License
-      // https://github.com/rafgraph/spa-github-pages
       (function(l) {
-        if (l.search[1] === '/' ) {
-          var decoded = l.search.slice(1).split('&').map(function(s) { 
-            return s.replace(/~and~/g, '&')
-          }).join('?');
-          window.history.replaceState(null, null,
-              l.pathname.slice(0, -1) + decoded + l.hash
-          );
+        if (l.search) {
+          var path = '';
+          if (l.search.startsWith('?p=')) {
+            var parts = l.search.slice(3).split('&');
+            path = parts[0].replace(/~and~/g, '&');
+            var q = parts.slice(1).join('&');
+            if (q.startsWith('q=')) q = q.slice(2);
+            if (q) path += '?' + q.replace(/~and~/g, '&');
+          } else if (l.search[1] === '/') {
+            var decoded = l.search.slice(1).split('&').map(function(s) { 
+              return s.replace(/~and~/g, '&');
+            }).join('?');
+            path = decoded;
+          }
+          if (path) {
+            if (!path.startsWith('/')) path = '/' + path;
+            window.history.replaceState(null, null,
+              l.pathname.replace(/\/$/, '') + path + l.hash
+            );
+          }
         }
       }(window.location))
     </script>
-    <script type="module" crossorigin src="/Official_Website/assets/index-DpeJ-078.js"></script>
+    <script type="module" crossorigin src="/Official_Website/assets/index-5hxBg_9g.js"></script>
     <link rel="modulepreload" crossorigin href="/Official_Website/assets/react-vendor-BlRx06bv.js">
     <link rel="modulepreload" crossorigin href="/Official_Website/assets/motion-vendor-BenKKcOX.js">
-    <link rel="modulepreload" crossorigin href="/Official_Website/assets/lucide-icons-DQtkT-26.js">
-    <link rel="stylesheet" crossorigin href="/Official_Website/assets/index-NgDzEsJ6.css">
+    <link rel="modulepreload" crossorigin href="/Official_Website/assets/lucide-icons-Comobwck.js">
+    <link rel="stylesheet" crossorigin href="/Official_Website/assets/index-RLSzOR20.css">
   </head>
   <body class="bg-[#030712] text-slate-100 antialiased selection:bg-cyan-500 selection:text-slate-950">
     <div id="root"></div>
