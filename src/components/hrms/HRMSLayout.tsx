@@ -34,6 +34,10 @@ export const HRMSLayout: React.FC<HRMSLayoutProps> = ({ children, activeTab }) =
 
   useEffect(() => {
     const user = getCurrentUser();
+    if (!user && activeTab !== 'login') {
+      navigate('/hrms/login');
+      return;
+    }
     setUserState(user);
 
     const contracts = getStoredContracts();
