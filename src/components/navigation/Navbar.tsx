@@ -383,8 +383,17 @@ export const Navbar: React.FC = () => {
               </Link>
             </div>
 
-            {/* Mobile Actions: Search + Hamburger Button */}
-            <div className="flex lg:hidden items-center gap-2">
+            {/* Mobile Actions: HRMS Badge + Search + Hamburger Button */}
+            <div className="flex lg:hidden items-center gap-1.5 sm:gap-2">
+              <Link
+                to="/hrms"
+                className="flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-emerald-950/80 border border-emerald-500/50 text-emerald-300 text-xs font-semibold hover:bg-emerald-900/80 shadow-sm"
+                title="Launch HRMS SaaS Portal"
+              >
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                <span>HRMS</span>
+              </Link>
+
               <button
                 onClick={() => setSearchModalOpen(true)}
                 className="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300"
